@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Maximum</title>
+</head>
+<body>
+
+    <h2>Find the Maximum</h2>
+    <label for="numbers">Enter integers:</label>
+    <input type="text" id="numbers">
+    <button onclick="findMax()">Find Maximum</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findMax() {
+            
+            const input = document.getElementById('numbers').value;
+            const arr = input.split(',').map(Number);
+            const maxElement = Math.max(...arr);
+            document.getElementById('result').innerText = `The maximum element is: ${maxElement}`;
+        }
+    </script>
+
+</body>
+</html>
